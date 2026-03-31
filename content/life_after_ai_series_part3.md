@@ -217,7 +217,7 @@ Which essay do you find more persuasive -- and does that say more about AI or ab
 
 **Life after AI | Part 27**
 
-Dear Aarav,
+Dear Kairav,
 
 You're ten years old. You don't read LinkedIn. You may never read this post. But I'm writing it anyway, because the world I've spent 27 posts describing is the world you'll inherit, and I want to be honest about what I see.
 

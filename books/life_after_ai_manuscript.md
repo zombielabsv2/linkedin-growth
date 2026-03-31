@@ -6,7 +6,7 @@
 
 ---
 
-*For Aarav, who taught me that being human was never about what you could do.*
+*For Kairav, who taught me that being human was never about what you could do.*
 
 ---
 
@@ -34,7 +34,7 @@ I have a particular vantage point for asking this question. I am a Director at G
 
 I am also an entrepreneur. My wife Kriti and I run Kari by Kriti, an artisanal Indian home decor brand. Every product is handcrafted by artisans in Jaipur and Lucknow. In an age of algorithmic recommendation and infinite digital content, we sell things made by human hands, chosen by human taste, discovered through human serendipity. Our business is, in a sense, a bet on everything AI cannot do.
 
-And I am a father. My son Aarav is nonverbal. He has autism. In a world that increasingly measures human worth by cognitive output -- speed, articulation, productivity -- he is invisible by every metric the market values. And yet he has taught me more about what it means to be human than any system, any framework, any boardroom.
+And I am a father. My son Kairav is nonverbal. He has autism. In a world that increasingly measures human worth by cognitive output -- speed, articulation, productivity -- he is invisible by every metric the market values. And yet he has taught me more about what it means to be human than any system, any framework, any boardroom.
 
 These three identities -- technologist, entrepreneur, father -- give me a lens that I have not found in any other book about AI. Not the view from the lab. Not the view from the policy institute. The view from the intersection of building the future and living in it.
 
@@ -296,7 +296,7 @@ I struggled with this. I still do.
 
 I am a Director at Google. I lead AI transformation. My value, for twenty years, was the ability to analyze complex situations, synthesize information, make strategic recommendations, and communicate them persuasively. AI does all of this. Not perfectly, but well enough to make my specific contribution feel smaller every quarter.
 
-What saves me -- what I keep returning to -- is the part of my identity that was never about the tasks. The part that cares whether the team member is burning out. The part that notices when a decision is technically optimal but ethically wrong. The part that remembers Aarav's face when I come home early.
+What saves me -- what I keep returning to -- is the part of my identity that was never about the tasks. The part that cares whether the team member is burning out. The part that notices when a decision is technically optimal but ethically wrong. The part that remembers Kairav's face when I come home early.
 
 The people who will thrive are not those who cling to their job title. They are the ones who define themselves by values and impact, not by tasks and tools. "I bring clarity to confusion." "I make people feel safe enough to take risks." "I notice what others overlook."
 
@@ -424,13 +424,13 @@ But this requires a fundamental shift in what we value. As long as we measure ed
 
 ---
 
-I think about this every day as Aarav's father.
+I think about this every day as Kairav's father.
 
 My son is nonverbal. He has autism. By every metric the current education system values -- verbal fluency, test performance, speed of information processing -- he is at the bottom. The system was not designed for him. And yet he possesses qualities that the AI age will desperately need: patience that is not productive, presence that is not strategic, a relationship with the physical world that no screen mediates.
 
 He cannot write an essay. But he can sit with another person in complete silence and make them feel seen. He cannot solve an equation. But he can sense emotional disturbance in a room before anyone has spoken a word. He cannot answer a standardized test. But he teaches me, every day, that the most important things about being human were never on any test.
 
-The education system that fails Aarav is the same education system that will fail every child in the AI age -- because it is optimized for the wrong things. It measures cognitive output when it should be cultivating human depth. It rewards speed when it should be building wisdom. It tests knowledge when it should be developing character.
+The education system that fails Kairav is the same education system that will fail every child in the AI age -- because it is optimized for the wrong things. It measures cognitive output when it should be cultivating human depth. It rewards speed when it should be building wisdom. It tests knowledge when it should be developing character.
 
 We are preparing children for the exam. We should be preparing them for the ambiguity.
 
@@ -566,13 +566,13 @@ In a post-AI world, these are not philosophical luxuries. They are survival guid
 
 I return, again and again, to my son.
 
-Aarav does not produce. He does not achieve, in any sense the market recognizes. He cannot write a resume. He cannot articulate a career aspiration. He cannot answer the question "what do you want to be when you grow up?"
+Kairav does not produce. He does not achieve, in any sense the market recognizes. He cannot write a resume. He cannot articulate a career aspiration. He cannot answer the question "what do you want to be when you grow up?"
 
 And yet he is the most purposeful person I know.
 
 His purpose is not derived from output. It is derived from being. From the quality of attention he brings to each moment. From the patience he teaches everyone who encounters him. From the love he gives without condition, without strategy, without any awareness that love is supposed to be transactional.
 
-When I watch Aarav, I see the answer to the Meaning Problem. Not as an abstraction, but as a lived demonstration. Purpose does not require productivity. Meaning does not require achievement. The deepest human experiences -- love, presence, compassion, beauty -- have nothing to do with work, and everything to do with attention.
+When I watch Kairav, I see the answer to the Meaning Problem. Not as an abstraction, but as a lived demonstration. Purpose does not require productivity. Meaning does not require achievement. The deepest human experiences -- love, presence, compassion, beauty -- have nothing to do with work, and everything to do with attention.
 
 The question is whether a civilization addicted to productivity can learn this lesson before the addiction kills it.
 
@@ -1078,13 +1078,13 @@ The family of 2035 might look more like the family of 1955 -- multi-generational
 
 I think about this through the lens of my own family.
 
-Aarav requires a level of daily care that most families cannot imagine. Therapy schedules, medication management, behavioral tracking, communication with specialists, coordination between school and home, planning for transitions that could trigger distress. The logistics of special-needs parenting are a full-time job layered on top of every other full-time job.
+Kairav requires a level of daily care that most families cannot imagine. Therapy schedules, medication management, behavioral tracking, communication with specialists, coordination between school and home, planning for transitions that could trigger distress. The logistics of special-needs parenting are a full-time job layered on top of every other full-time job.
 
 AI could handle much of this. Scheduling algorithms that coordinate therapist availability with school hours. Health monitoring that tracks behavioral patterns and flags concerns before they escalate. Communication systems that keep every caregiver informed without requiring my wife or me to send fifteen individual updates.
 
 The liberation would be real. We would reclaim hours. We would reduce errors. We would have fewer days where something falls through the cracks because the coordination burden exceeded our capacity.
 
-But here is what I know with certainty: the most important moments in Aarav's life will never be managed by an algorithm. The moment he makes eye contact and holds it for three seconds. The first time he reaches for my hand instead of pulling away. The afternoon he sits quietly while I read, not because he understands the words but because he feels the rhythm of my voice. These moments cannot be scheduled, optimized, or delegated. They require nothing but presence.
+But here is what I know with certainty: the most important moments in Kairav's life will never be managed by an algorithm. The moment he makes eye contact and holds it for three seconds. The first time he reaches for my hand instead of pulling away. The afternoon he sits quietly while I read, not because he understands the words but because he feels the rhythm of my voice. These moments cannot be scheduled, optimized, or delegated. They require nothing but presence.
 
 AI can free us for these moments. But it can also, if we are not careful, fill the freed time with more work, more productivity, more optimization -- and the moments pass unseen.
 
@@ -1454,7 +1454,7 @@ If AI took away everything you do, what would be left of who you are?
 
 ---
 
-Dear Aarav,
+Dear Kairav,
 
 You are ten years old. You do not read LinkedIn. You will probably never read this book. But I am writing it anyway, because the world I have spent twenty-seven chapters describing is the world you will inherit, and I want to be honest about what I see.
 
@@ -1480,7 +1480,7 @@ The world is becoming more capable. AI will handle more, decide more, produce mo
 
 But is the world becoming more kind?
 
-This is the question that haunts me, Aarav. Not whether AI will be powerful. It will. Not whether it will be transformative. It already is. But whether, in the rush to build intelligence, we will remember to build compassion. Whether, in the race to automate labor, we will protect the laborers. Whether, in the pursuit of capability, we will preserve the capacity for care.
+This is the question that haunts me, Kairav. Not whether AI will be powerful. It will. Not whether it will be transformative. It already is. But whether, in the rush to build intelligence, we will remember to build compassion. Whether, in the race to automate labor, we will protect the laborers. Whether, in the pursuit of capability, we will preserve the capacity for care.
 
 AI will handle the doing. The question that remains -- the only question that ever mattered -- is about being. Can we be present with each other? Can we love without conditions? Can we see the world as it is, not as our algorithms curate it?
 
