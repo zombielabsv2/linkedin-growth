@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Command Center — Rahul Jindal</title>
+</head>
+<body style="margin:0; padding:0; background:#0d1117; color:#c9d1d9; font-family:'Segoe UI',system-ui,-apple-system,sans-serif; line-height:1.6;">
+
+<!-- Top Bar -->
+<div style="background:#161b22; border-bottom:1px solid #30363d; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100;">
+  <div style="display:flex; align-items:center; gap:16px;">
+    <div style="width:36px; height:36px; background:linear-gradient(135deg,#58a6ff,#bc8cff); border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:#0d1117;">RJ</div>
+    <div>
+      <div style="font-size:18px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Content Command Center</div>
+      <div style="font-size:12px; color:#8b949e;">LinkedIn Growth Engine &middot; Last updated: March 31, 2026</div>
+    </div>
+  </div>
+  <div style="display:flex; gap:12px; align-items:center;">
+    <div style="background:#1f6feb22; border:1px solid #1f6feb44; border-radius:6px; padding:4px 12px; font-size:13px; color:#58a6ff;">70 Posts</div>
+    <div style="background:#23862622; border:1px solid #23862644; border-radius:6px; padding:4px 12px; font-size:13px; color:#3fb950;">15,558 Reactions</div>
+    <div style="background:#bc8cff22; border:1px solid #bc8cff44; border-radius:6px; padding:4px 12px; font-size:13px; color:#bc8cff;">4 Books</div>
+  </div>
+</div>
+
+<!-- Main Container -->
+<div style="max-width:1400px; margin:0 auto; padding:24px 32px;">
+
+<!-- ============================================ -->
+<!-- SECTION: Engagement Stats -->
+<!-- ============================================ -->
+<div style="margin-bottom:32px;">
+  <div onclick="toggleSection('stats')" style="cursor:pointer; display:flex; align-items:center; gap:8px; margin-bottom:16px; user-select:none;">
+    <span id="stats-arrow" style="color:#8b949e; font-size:14px; transition:transform 0.2s; display:inline-block;">&#9660;</span>
+    <h2 style="margin:0; font-size:20px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Engagement Stats</h2>
+    <div style="flex:1; height:1px; background:#30363d; margin-left:12px;"></div>
+  </div>
+  <div id="stats" style="display:block;">
+    <!-- Stat Cards Row -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-bottom:24px;">
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:#58a6ff; letter-spacing:-1px;">70</div>
+        <div style="font-size:13px; color:#8b949e; margin-top:4px;">Total Posts</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:#3fb950; letter-spacing:-1px;">15,558</div>
+        <div style="font-size:13px; color:#8b949e; margin-top:4px;">Total Reactions</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:#bc8cff; letter-spacing:-1px;">222</div>
+        <div style="font-size:13px; color:#8b949e; margin-top:4px;">Avg Reactions/Post</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:#f0883e; letter-spacing:-1px;">28K</div>
+        <div style="font-size:13px; color:#8b949e; margin-top:4px;">Followers</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:#f778ba; letter-spacing:-1px;">56%</div>
+        <div style="font-size:13px; color:#8b949e; margin-top:4px;">Large Enterprise (10K+)</div>
+      </div>
+    </div>
+    <!-- Top 5 Posts -->
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px;">
+      <div style="font-size:14px; font-weight:600; color:#f0f6fc; margin-bottom:12px;">Top 5 Posts by Engagement</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 12px; background:#0d1117; border-radius:6px;">
+          <div style="font-size:20px; font-weight:800; color:#58a6ff; min-width:32px;">1</div>
+          <div style="flex:1;"><span style="color:#f0f6fc; font-weight:500;">Google's 25th Birthday</span> <span style="color:#8b949e; font-size:12px;">— Google Insider</span></div>
+          <div style="font-weight:700; color:#3fb950;">1,951</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 12px; background:#0d1117; border-radius:6px;">
+          <div style="font-size:20px; font-weight:800; color:#58a6ff; min-width:32px;">2</div>
+          <div style="flex:1;"><span style="color:#f0f6fc; font-weight:500;">Lightning Can Strike Twice</span> <span style="color:#8b949e; font-size:12px;">— 10 Years at Google</span></div>
+          <div style="font-weight:700; color:#3fb950;">1,878</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 12px; background:#0d1117; border-radius:6px;">
+          <div style="font-size:20px; font-weight:800; color:#58a6ff; min-width:32px;">3</div>
+          <div style="flex:1;"><span style="color:#f0f6fc; font-weight:500;">IIM Ahmedabad Lessons</span> <span style="color:#8b949e; font-size:12px;">— Institution/Career</span></div>
+          <div style="font-weight:700; color:#3fb950;">1,502</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 12px; background:#0d1117; border-radius:6px;">
+          <div style="font-size:20px; font-weight:800; color:#58a6ff; min-width:32px;">4</div>
+          <div style="flex:1;"><span style="color:#f0f6fc; font-weight:500;">Seats on Top of the Airplane</span> <span style="color:#8b949e; font-size:12px;">— Creative Thinking</span></div>
+          <div style="font-weight:700; color:#3fb950;">746</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 12px; background:#0d1117; border-radius:6px;">
+          <div style="font-size:20px; font-weight:800; color:#58a6ff; min-width:32px;">5</div>
+          <div style="flex:1;"><span style="color:#f0f6fc; font-weight:500;">Good Manager vs Nice Manager</span> <span style="color:#8b949e; font-size:12px;">— People Leadership</span></div>
+          <div style="font-weight:700; color:#3fb950;">448</div>
+        </div>
+      </div>
+    </div>
+    <!-- Key Patterns -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; margin-top:16px;">
+      <div style="background:#161b22; border:1px solid #1f6feb44; border-left:3px solid #58a6ff; border-radius:6px; padding:14px 16px;">
+        <div style="font-size:13px; font-weight:600; color:#58a6ff; margin-bottom:4px;">Top Category: Google Insider</div>
+        <div style="font-size:12px; color:#8b949e;">Top 3 posts are all institutional insider content. Combined: 5,331 likes. Your unfair advantage.</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #3fb95044; border-left:3px solid #3fb950; border-radius:6px; padding:14px 16px;">
+        <div style="font-size:13px; font-weight:600; color:#3fb950; margin-bottom:4px;">Most Consistent: Management Q&A</div>
+        <div style="font-size:12px; color:#8b949e;">Avg 229 likes/post. Only 7 posts written. Should be 30+. Reliable content machine.</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #f0883e44; border-left:3px solid #f0883e; border-radius:6px; padding:14px 16px;">
+        <div style="font-size:13px; font-weight:600; color:#f0883e; margin-bottom:4px;">Key Insight: Stories > Philosophy</div>
+        <div style="font-size:12px; color:#8b949e;">Personal vulnerability + specific story = 5-8x more engagement than abstract philosophy.</div>
+      </div>
+      <div style="background:#161b22; border:1px solid #bc8cff44; border-left:3px solid #bc8cff; border-radius:6px; padding:14px 16px;">
+        <div style="font-size:13px; font-weight:600; color:#bc8cff; margin-bottom:4px;">Audience: Senior Tech Leaders</div>
+        <div style="font-size:12px; color:#8b949e;">35% Senior, 13% Director, 5% VP. 26% Tech, 15% IT Consulting. 24% Bangalore, 17% Delhi.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION: Series Overview -->
+<!-- ============================================ -->
+<div style="margin-bottom:32px;">
+  <div onclick="toggleSection('series')" style="cursor:pointer; display:flex; align-items:center; gap:8px; margin-bottom:16px; user-select:none;">
+    <span id="series-arrow" style="color:#8b949e; font-size:14px; transition:transform 0.2s; display:inline-block;">&#9660;</span>
+    <h2 style="margin:0; font-size:20px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Series Overview</h2>
+    <div style="flex:1; height:1px; background:#30363d; margin-left:12px;"></div>
+  </div>
+  <div id="series" style="display:block;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px;">
+
+      <!-- Org Metabolism Series -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="padding:20px; border-bottom:1px solid #30363d;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#f0f6fc;">Organizational Metabolism</div>
+              <div style="font-size:12px; color:#8b949e; margin-top:2px;">AI Transformation at Scale</div>
+            </div>
+            <div style="background:#23862622; border:1px solid #23862644; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; color:#3fb950;">10/10 DRAFTED</div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:4px;">
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('om-posts')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">Show all 10 posts &#9662;</div>
+          <div id="om-posts" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 1. The Core Premise — What Is Org Metabolism?</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 2. The Metabolism Gap — Why AI Transformations Fail</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 3. The 4 Archetypes — Cosmetic to Adaptive</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 4. Workflow Debt — The Hidden Liability</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 5. Verification Architecture — Trust Systems</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 6. Layer Compression — Middle Mgmt Evolution</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 7. Decision Traces — The New Moat</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 8. The 7 Wonders Beyond Efficiency</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 9. The Abstraction Layer — Don't Chase Launches</div>
+            <div style="padding:4px 0;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 10. The Compounding Effect — Gap Is Accelerating</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Career Volume Series -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="padding:20px; border-bottom:1px solid #30363d;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#f0f6fc;">Career Volume</div>
+              <div style="font-size:12px; color:#8b949e; margin-top:2px;">Length x Breadth x Depth</div>
+            </div>
+            <div style="background:#23862622; border:1px solid #23862644; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; color:#3fb950;">10/10 DRAFTED</div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:4px;">
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#3fb950; border-radius:2px;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('cv-posts')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">Show all 10 posts &#9662;</div>
+          <div id="cv-posts" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 1. The Career Volume Equation</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 2. The Wrong Race — Youngest in the Room</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 3. They Said Change Only One</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 4. The Manthan — Deep Introspection</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 5. Gap vs Gain — The Burnout Equation</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 6. Raising the Stakes — Self-Sabotage</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 7. Speaking Someone Else's Language</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 8. Choosing Environments</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 9. Winter Is the Time to Build</div>
+            <div style="padding:4px 0;"><span style="color:#3fb950; margin-right:6px;">&#10003;</span> 10. The 10-Year Question Reframed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Life After AI Series -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="padding:20px; border-bottom:1px solid #30363d;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#f0f6fc;">Life After AI</div>
+              <div style="font-size:12px; color:#8b949e; margin-top:2px;">How AI reshapes everything beyond work</div>
+            </div>
+            <div style="background:#f0883e22; border:1px solid #f0883e44; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; color:#f0883e;">0/15 PROPOSED</div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:4px;">
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div style="font-size:12px; color:#8b949e;">15 proposed topics across work, society, relationships, identity. See full explorer below.</div>
+        </div>
+      </div>
+
+      <!-- Shadow and Shade / Management Q&A -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="padding:20px; border-bottom:1px solid #30363d;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#f0f6fc;">Shadow & Shade / Management Q&A</div>
+              <div style="font-size:12px; color:#8b949e; margin-top:2px;">The Honest Manager's Playbook</div>
+            </div>
+            <div style="background:#bc8cff22; border:1px solid #bc8cff44; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; color:#bc8cff;">PROPOSED</div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:4px;">
+            <div style="flex:1; height:4px; background:#bc8cff; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#bc8cff; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#bc8cff; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+            <div style="flex:1; height:4px; background:#30363d; border-radius:2px;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('ss-posts')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">Show proposed topics &#9662;</div>
+          <div id="ss-posts" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Good vs Nice Manager (seed: 448 likes)</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Shadow/Shade — Thermostat vs Thermometer</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> First 90 Days (seed: 233 likes)</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Hiring People Better Than You</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> The Insecure Team Member</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Managing the New Hire</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> The Gadfly — Why You Need Them</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Stakeholder Management</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Sam Is Here — Reliability</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> O-C-D Framework</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Perceptions Before Substance</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Never Vilify</div>
+            <div style="padding:4px 0; border-bottom:1px solid #21262d;"><span style="color:#bc8cff; margin-right:6px;">&#9679;</span> Exporting Talent</div>
+            <div style="padding:4px 0;"><span style="color:#f0883e; margin-right:6px;">&#9679;</span> <span style="color:#f0883e;">The Hard Conversations [TO BE WRITTEN]</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION: Book Pipeline -->
+<!-- ============================================ -->
+<div style="margin-bottom:32px;">
+  <div onclick="toggleSection('books')" style="cursor:pointer; display:flex; align-items:center; gap:8px; margin-bottom:16px; user-select:none;">
+    <span id="books-arrow" style="color:#8b949e; font-size:14px; transition:transform 0.2s; display:inline-block;">&#9660;</span>
+    <h2 style="margin:0; font-size:20px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Book Pipeline</h2>
+    <div style="flex:1; height:1px; background:#30363d; margin-left:12px;"></div>
+  </div>
+  <div id="books" style="display:block;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px;">
+
+      <!-- Book 1: Organizational Metabolism -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#1f6feb33,#58a6ff11); padding:20px; border-bottom:1px solid #30363d;">
+          <div style="font-size:11px; font-weight:700; color:#58a6ff; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Book 1 — Highest Priority</div>
+          <div style="font-size:18px; font-weight:800; color:#f0f6fc; letter-spacing:-0.3px;">Organizational Metabolism</div>
+          <div style="font-size:13px; color:#8b949e; margin-top:2px;">How Enterprises Convert Intelligence Into Advantage</div>
+          <div style="font-size:12px; color:#8b949e; margin-top:8px;">Audience: CXOs, transformation leaders, strategy consultants, AI leaders</div>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px;">
+            <div style="flex:1; background:#30363d; border-radius:4px; height:8px; overflow:hidden;">
+              <div style="width:40%; height:100%; background:linear-gradient(90deg,#1f6feb,#58a6ff); border-radius:4px;"></div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#58a6ff;">~40%</div>
+          </div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Business book, 50K words. Differentiation: Very High</div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('book1-ch')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">12 Chapters + Seed Posts &#9662;</div>
+          <div id="book1-ch" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 1: The Metabolism Gap</div>
+              <div style="font-size:11px; color:#8b949e;">Why most AI transformations fail (74% stuck at pilots)</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 2</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 2: The Four Archetypes</div>
+              <div style="font-size:11px; color:#8b949e;">Cosmetic &rarr; Assisted &rarr; Augmented &rarr; Adaptive</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 3</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 3: Workflow Debt</div>
+              <div style="font-size:11px; color:#8b949e;">The hidden liability of accumulated process complexity</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 4</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 4: Verification Architecture</div>
+              <div style="font-size:11px; color:#8b949e;">From checking every output to trusting systems</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 5</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 5: Layer Compression</div>
+              <div style="font-size:11px; color:#8b949e;">Why review layers persist and how to evolve them</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 6</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 6: Decision Traces</div>
+              <div style="font-size:11px; color:#8b949e;">The new moat (state clock vs event clock)</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 7, "Future of the Moat" (325 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 7: The 7 Wonders of AI Value</div>
+              <div style="font-size:11px; color:#8b949e;">Beyond efficiency</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 8, "7 Wonders" (105 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 8: The Metabolic Index</div>
+              <div style="font-size:11px; color:#8b949e;">Measuring readiness across 6 dimensions</div>
+              <div style="font-size:11px; color:#f0883e; margin-top:2px;">No seed post yet</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 9: The Abstraction Layer</div>
+              <div style="font-size:11px; color:#8b949e;">Why you don't need to chase every launch</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 9, "Don't Chase Every Launch" (83 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 10: Leadership Playbook</div>
+              <div style="font-size:11px; color:#8b949e;">5 commitments that drive metabolic rate</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: "Five Force Multipliers" (151 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 11: Case Studies</div>
+              <div style="font-size:11px; color:#8b949e;">Anonymized Google and enterprise examples</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Gadfly/SVB (167 likes), How to Land a Transformation (66 likes)</div>
+            </div>
+            <div style="padding:6px 0;">
+              <div style="color:#f0f6fc;">Ch 12: The Compounding Effect</div>
+              <div style="font-size:11px; color:#8b949e;">Why the gap is accelerating, not narrowing</div>
+              <div style="font-size:11px; color:#3fb950; margin-top:2px;">Seed: Series Post 10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 2: Career Volume -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#3fb95033,#3fb95011); padding:20px; border-bottom:1px solid #30363d;">
+          <div style="font-size:11px; font-weight:700; color:#3fb950; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Book 2</div>
+          <div style="font-size:18px; font-weight:800; color:#f0f6fc; letter-spacing:-0.3px;">Career Volume</div>
+          <div style="font-size:13px; color:#8b949e; margin-top:2px;">Length x Breadth x Depth</div>
+          <div style="font-size:12px; color:#8b949e; margin-top:8px;">Audience: Mid-career professionals, MBA students, career pivoters</div>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px;">
+            <div style="flex:1; background:#30363d; border-radius:4px; height:8px; overflow:hidden;">
+              <div style="width:35%; height:100%; background:linear-gradient(90deg,#238636,#3fb950); border-radius:4px;"></div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#3fb950;">~35%</div>
+          </div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Narrative business book, 55K words. Think "Range" by Epstein</div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('book2-ch')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">15 Chapters + Seed Posts &#9662;</div>
+          <div id="book2-ch" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 1: The Volume Equation</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Career Volume" (116 likes), Series Post 1</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 2: The Wrong Race</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Youngest Person" (68 likes), Series Post 2</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 3: They Said Change Only One</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Your Value Proposition" (163 likes), Series Post 3</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 4: The Manthan</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: Series Post 4</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 5: Gap vs Gain</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Gap vs Gain" (166 likes), Series Post 5</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 6: Raised the Stakes</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Calm Resilience" (193 likes), Series Post 6</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 7: Career Pivot</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Career Pivot" (365 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 8: Speaking Mr. Mahindra's Language</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Mr. Mahindra" (297 likes), Series Post 7</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 9: The Geography Variable</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Global Role" (362 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 10: Expectation Mismatch &rarr; Exceptional Match</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Expectation Mismatch" (114 likes), Series Post 8</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 11: Quiet Quitting &rarr; Quit Quitting</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Learned Helplessness" (170 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 12: Winter Is the Time to Build</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Winter/Build" (160 likes), Series Post 9</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 13: Effort vs Impact</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Effort vs Impact" (83 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 14: 5 Mistakes I Wish I Had Not Made</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Mistakes 1" (240 likes), "Mistakes 2" (155 likes)</div>
+            </div>
+            <div style="padding:6px 0;">
+              <div style="color:#f0f6fc;">Ch 15: The 10-Year Question Reframed</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "10 Years" (153 likes), Series Post 10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 3: Shadow and Shade -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#bc8cff33,#bc8cff11); padding:20px; border-bottom:1px solid #30363d;">
+          <div style="font-size:11px; font-weight:700; color:#bc8cff; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Book 3</div>
+          <div style="font-size:18px; font-weight:800; color:#f0f6fc; letter-spacing:-0.3px;">Shadow and Shade</div>
+          <div style="font-size:13px; color:#8b949e; margin-top:2px;">The Honest Manager's Playbook for Leading People</div>
+          <div style="font-size:12px; color:#8b949e; margin-top:8px;">Audience: First-time and mid-level managers, especially tech/enterprise</div>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px;">
+            <div style="flex:1; background:#30363d; border-radius:4px; height:8px; overflow:hidden;">
+              <div style="width:30%; height:100%; background:linear-gradient(90deg,#8957e5,#bc8cff); border-radius:4px;"></div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#bc8cff;">~30%</div>
+          </div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Short practical book, 40K words. Think Julie Zhuo</div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('book3-ch')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">14 Chapters + Seed Posts &#9662;</div>
+          <div id="book3-ch" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 1: Good Manager vs Nice Manager</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 448 likes, 35 comments</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 2: Shadow of the Leader, Shade of the Team</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 35 likes (underperformed — article format)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 3: The First 90 Days</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 233 likes, 11 comments</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 4: Hiring People Better Than You</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Durable Inspiration" (105 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 5: The Insecure Team Member</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Underappreciated" (134 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 6: The New Hire</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Managing New Hire" (100 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 7: The Gadfly</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Keeping the Gadfly Alive" (167 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 8: Stakeholder Management</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 243 likes, 22 comments</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 9: Sam Is Here</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 103 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 10: O-C-D — Observe, Contribute, Drive</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 76 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 11: Perceptions Before Substance</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 195 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 12: Never Vilify</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 88 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 13: Exporting Talent</div>
+              <div style="font-size:11px; color:#f0883e;">No seed post yet</div>
+            </div>
+            <div style="padding:6px 0;">
+              <div style="color:#f0f6fc;">Ch 14: The Hard Conversations</div>
+              <div style="font-size:11px; color:#da3633;">TO BE WRITTEN — firing, bad news, managing out</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 4: Awakening, Assets & Access -->
+      <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#f0883e33,#f0883e11); padding:20px; border-bottom:1px solid #30363d;">
+          <div style="font-size:11px; font-weight:700; color:#f0883e; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Book 4</div>
+          <div style="font-size:18px; font-weight:800; color:#f0f6fc; letter-spacing:-0.3px;">Awakening, Assets & Access</div>
+          <div style="font-size:13px; color:#8b949e; margin-top:2px;">Lessons from an Unlikely Life</div>
+          <div style="font-size:12px; color:#8b949e; margin-top:8px;">Audience: Professionals, aspiring leaders, Indian diaspora</div>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px;">
+            <div style="flex:1; background:#30363d; border-radius:4px; height:8px; overflow:hidden;">
+              <div style="width:25%; height:100%; background:linear-gradient(90deg,#d47616,#f0883e); border-radius:4px;"></div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#f0883e;">~25%</div>
+          </div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Memoir-meets-philosophy, 60K words. Think "Shoe Dog" meets Naval</div>
+        </div>
+        <div style="padding:12px 20px;">
+          <div onclick="toggleSection('book4-ch')" style="cursor:pointer; font-size:12px; color:#58a6ff; font-weight:500; user-select:none;">15 Chapters + Seed Posts &#9662;</div>
+          <div id="book4-ch" style="display:none; margin-top:8px; font-size:13px;">
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 1: Awakening, Assets & Access</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "AAA framework" (107 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 2: North India to the World</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Love, Fragrance" (86 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 3: The Uber Drivers</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Uber Drivers" (428 likes) — 5th highest ever</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 4: Every Situation, Every Person</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Every Situation" (165 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 5: The Freak Accident in Australia</div>
+              <div style="font-size:11px; color:#da3633;">TO BE WRITTEN</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 6: The Son Who Changed Everything</div>
+              <div style="font-size:11px; color:#da3633;">TO BE WRITTEN — autism, diversity, allyship</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 7: 71 Companies</div>
+              <div style="font-size:11px; color:#da3633;">TO BE WRITTEN — angel investing lessons</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 8: Kalpana Creates Reality</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Imagination creates reality"</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 9: We Can Only Give What We Have</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 61 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 10: Empty Your Cup</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Ve Haaniyaan" (138 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 11: What These Politicians Won't Do</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 113 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 12: Three Levels of Victory</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 81 likes</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 13: Invest, Respect, Reflect</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Partner" (224 likes)</div>
+            </div>
+            <div style="padding:6px 0; border-bottom:1px solid #21262d;">
+              <div style="color:#f0f6fc;">Ch 14: The Person is Most Important</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: "Person, Purpose, Path" (52 likes)</div>
+            </div>
+            <div style="padding:6px 0;">
+              <div style="color:#f0f6fc;">Ch 15: Determine to Be Not Poor</div>
+              <div style="font-size:11px; color:#3fb950;">Seed: 102 likes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION: Life After AI Topic Explorer -->
+<!-- ============================================ -->
+<div style="margin-bottom:32px;">
+  <div onclick="toggleSection('lai')" style="cursor:pointer; display:flex; align-items:center; gap:8px; margin-bottom:16px; user-select:none;">
+    <span id="lai-arrow" style="color:#8b949e; font-size:14px; transition:transform 0.2s; display:inline-block;">&#9660;</span>
+    <h2 style="margin:0; font-size:20px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Life After AI — Topic Explorer</h2>
+    <div style="flex:1; height:1px; background:#30363d; margin-left:12px;"></div>
+  </div>
+  <div id="lai" style="display:block;">
+    <div style="font-size:13px; color:#8b949e; margin-bottom:16px; max-width:700px;">
+      Each topic explores how AI fundamentally reshapes a dimension of human life. Click status indicators to cycle through: Not Started &rarr; Researching &rarr; Drafted &rarr; Published. Notes are saved to your browser's localStorage.
+    </div>
+    <div id="lai-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px;">
+      <!-- Cards will be generated by JavaScript below -->
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION: Quick Ideas -->
+<!-- ============================================ -->
+<div style="margin-bottom:64px;">
+  <div onclick="toggleSection('ideas')" style="cursor:pointer; display:flex; align-items:center; gap:8px; margin-bottom:16px; user-select:none;">
+    <span id="ideas-arrow" style="color:#8b949e; font-size:14px; transition:transform 0.2s; display:inline-block;">&#9660;</span>
+    <h2 style="margin:0; font-size:20px; font-weight:700; color:#f0f6fc; letter-spacing:-0.3px;">Quick Ideas</h2>
+    <div style="flex:1; height:1px; background:#30363d; margin-left:12px;"></div>
+  </div>
+  <div id="ideas" style="display:block;">
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px;">
+      <div style="font-size:13px; color:#8b949e; margin-bottom:12px;">Jot down new post ideas, hooks, or observations. Auto-saved to your browser.</div>
+      <textarea id="quickIdeas" oninput="saveQuickIdeas()" placeholder="Type your ideas here...
+
+Example:
+- Hook idea: 'Your company doesn't have an AI problem. It has a digestion problem.'
+- Post concept: What if middle managers become AI coaches?
+- Series idea: 'Google Lessons' monthly series
+- Repackage: Turn 'Good Manager vs Nice Manager' into a carousel" style="width:100%; min-height:200px; background:#0d1117; border:1px solid #30363d; border-radius:8px; color:#c9d1d9; font-family:'Segoe UI',system-ui,sans-serif; font-size:14px; line-height:1.6; padding:16px; resize:vertical; box-sizing:border-box; outline:none;"></textarea>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+        <div id="saveStatus" style="font-size:11px; color:#8b949e;">Saved to localStorage</div>
+        <button onclick="clearQuickIdeas()" style="background:none; border:1px solid #30363d; color:#8b949e; border-radius:6px; padding:4px 12px; font-size:12px; cursor:pointer;">Clear All</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- End main container -->
+
+<script>
+// ============================
+// Section Toggle
+// ============================
+function toggleSection(id) {
+  var el = document.getElementById(id);
+  var arrow = document.getElementById(id + '-arrow');
+  if (!el) return;
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    if (arrow) arrow.innerHTML = '&#9660;';
+  } else {
+    el.style.display = 'none';
+    if (arrow) arrow.innerHTML = '&#9654;';
+  }
+}
+
+// ============================
+// Life After AI Topics Data
+// ============================
+var laiTopics = [
+  {
+    id: 'lai-work',
+    title: 'Future of Work',
+    subtitle: 'Quantity, Quality, Meaning',
+    color: '#58a6ff',
+    keyQuestion: 'When AI can do 80% of knowledge work, what does "having a job" even mean?',
+    subtopics: ['How much work will exist?', 'What quality of work remains for humans?', 'Where does meaning come from when output is automated?', 'The 4-hour workweek — for real this time?']
+  },
+  {
+    id: 'lai-teams',
+    title: 'Future of Teams',
+    subtitle: 'Size, Structure, Agents',
+    color: '#58a6ff',
+    keyQuestion: 'Will the optimal team be 1 human + 10 AI agents, or does collaboration remain irreplaceable?',
+    subtopics: ['The 1-person billion-dollar company', 'AI teammates vs AI tools', 'Management when half your reports are agents', 'Team chemistry in hybrid human-AI squads']
+  },
+  {
+    id: 'lai-skills',
+    title: 'Future of Human Skills',
+    subtitle: 'What remains uniquely human',
+    color: '#3fb950',
+    keyQuestion: 'If AI masters every hard skill, do soft skills become the only career moat?',
+    subtopics: ['Judgment, empathy, taste, presence', 'The premium on "being human"', 'Skills that compound vs skills that depreciate', 'Creativity as a human right, not a job function']
+  },
+  {
+    id: 'lai-workplace',
+    title: 'Future of the Workplace',
+    subtitle: 'Office, remote, virtual, none',
+    color: '#3fb950',
+    keyQuestion: 'If work can happen anywhere and anytime via AI agents, why would we commute?',
+    subtopics: ['Office as social club, not work site', 'Digital twins attending meetings', 'The end of the 9-to-5', 'Real estate implications']
+  },
+  {
+    id: 'lai-income',
+    title: 'Future of Income / UBI',
+    subtitle: 'Earning, owning, receiving',
+    color: '#f0883e',
+    keyQuestion: 'When AI displaces millions of jobs, how does society redistribute wealth?',
+    subtopics: ['UBI experiments and results', 'Ownership of AI-generated value', 'The new social contract', 'From employment to "contribution"']
+  },
+  {
+    id: 'lai-education',
+    title: 'Future of Education',
+    subtitle: 'Learning, credentialing, growing',
+    color: '#f0883e',
+    keyQuestion: 'Why spend 4 years learning what an AI tutor can teach in 4 months?',
+    subtopics: ['Personalized AI tutors for everyone', 'The death of standardized testing', 'University as network, not knowledge', 'Lifelong learning as survival skill']
+  },
+  {
+    id: 'lai-governance',
+    title: 'Future of Governance',
+    subtitle: 'Policy, regulation, democracy',
+    color: '#f0883e',
+    keyQuestion: 'Can AI make better policy decisions than elected officials — and should it?',
+    subtopics: ['Algorithmic governance experiments', 'AI-assisted policy modeling', 'Digital democracy and direct voting', 'Regulation of AI itself — who watches the watchmen?']
+  },
+  {
+    id: 'lai-commerce',
+    title: 'Future of Shopping / Commerce',
+    subtitle: 'Buying, selling, choosing',
+    color: '#bc8cff',
+    keyQuestion: 'When your AI agent does all the shopping, does brand loyalty die?',
+    subtopics: ['AI personal shoppers', 'The end of browsing', 'Agent-to-agent commerce', 'From advertising to AI persuasion']
+  },
+  {
+    id: 'lai-friendship',
+    title: 'Future of Friendship / Companionship',
+    subtitle: 'Connection, loneliness, AI friends',
+    color: '#bc8cff',
+    keyQuestion: 'If an AI companion is always available and always kind, will humans still choose messy human friendships?',
+    subtopics: ['AI companions vs human friends', 'The loneliness epidemic meets AI', 'Digital presence vs physical presence', 'Parasocial relationships at scale']
+  },
+  {
+    id: 'lai-love',
+    title: 'Future of Love / Relationships',
+    subtitle: 'Dating, partnership, intimacy',
+    color: '#f778ba',
+    keyQuestion: 'When AI can simulate perfect compatibility, what happens to the beautiful imperfection of human love?',
+    subtopics: ['AI matchmaking beyond swipe culture', 'Relationship coaching by AI', 'Emotional AI and attachment theory', 'The ethics of AI romantic partners']
+  },
+  {
+    id: 'lai-family',
+    title: 'Future of Family Structure',
+    subtitle: 'Parenting, caregiving, generational bonds',
+    color: '#f778ba',
+    keyQuestion: 'When AI can tutor, babysit, and monitor health — what is a parent\'s role?',
+    subtopics: ['AI-assisted parenting', 'Elder care transformation', 'Generational gaps in AI comfort', 'Redefining "quality time"']
+  },
+  {
+    id: 'lai-society',
+    title: 'Future of Society / Nations',
+    subtitle: 'Culture, borders, identity',
+    color: '#da3633',
+    keyQuestion: 'Will AI create a global monoculture, or enable a thousand micro-cultures to flourish?',
+    subtopics: ['AI-powered cultural preservation', 'Digital nations and citizenship', 'The power shift: capital vs intelligence', 'Social cohesion when reality is personalized']
+  },
+  {
+    id: 'lai-creativity',
+    title: 'Future of Creativity',
+    subtitle: 'Art, music, writing, design',
+    color: '#da3633',
+    keyQuestion: 'If AI can create art indistinguishable from human work, what makes human creativity valuable?',
+    subtopics: ['AI as collaborator vs competitor', 'The authenticity premium', 'Democratization of creative tools', 'Copyright and attribution in AI age']
+  },
+  {
+    id: 'lai-health',
+    title: 'Future of Health',
+    subtitle: 'Diagnosis, longevity, wellbeing',
+    color: '#3fb950',
+    keyQuestion: 'When AI can diagnose disease before symptoms appear, what does "being healthy" mean?',
+    subtopics: ['Preventive AI health monitoring', 'Mental health AI therapists', 'Drug discovery acceleration', 'The longevity divide: access vs inequality']
+  },
+  {
+    id: 'lai-identity',
+    title: 'Future of Identity',
+    subtitle: 'Self, purpose, meaning',
+    color: '#da3633',
+    keyQuestion: 'If AI can do everything you do — better — who are you?',
+    subtopics: ['Work as identity vs being as identity', 'The meaning crisis', 'Digital self vs physical self', 'Finding purpose beyond productivity']
+  }
+];
+
+var statusCycle = ['not-started', 'researching', 'drafted', 'published'];
+var statusLabels = {
+  'not-started': 'Not Started',
+  'researching': 'Researching',
+  'drafted': 'Drafted',
+  'published': 'Published'
+};
+var statusColors = {
+  'not-started': '#8b949e',
+  'researching': '#f0883e',
+  'drafted': '#58a6ff',
+  'published': '#3fb950'
+};
+var statusBgColors = {
+  'not-started': '#8b949e22',
+  'researching': '#f0883e22',
+  'drafted': '#58a6ff22',
+  'published': '#23862622'
+};
+var statusBorderColors = {
+  'not-started': '#8b949e44',
+  'researching': '#f0883e44',
+  'drafted': '#58a6ff44',
+  'published': '#23862644'
+};
+
+// Load saved state
+function loadTopicState(topicId) {
+  try {
+    var saved = localStorage.getItem('lai_' + topicId);
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return { status: 'not-started', notes: '' };
+}
+
+function saveTopicState(topicId, state) {
+  try {
+    localStorage.setItem('lai_' + topicId, JSON.stringify(state));
+  } catch(e) {}
+}
+
+function cycleStatus(topicId) {
+  var state = loadTopicState(topicId);
+  var idx = statusCycle.indexOf(state.status);
+  state.status = statusCycle[(idx + 1) % statusCycle.length];
+  saveTopicState(topicId, state);
+  renderLaiCards();
+}
+
+function updateNotes(topicId, notes) {
+  var state = loadTopicState(topicId);
+  state.notes = notes;
+  saveTopicState(topicId, state);
+}
+
+function renderLaiCards() {
+  var grid = document.getElementById('lai-grid');
+  var html = '';
+  for (var i = 0; i < laiTopics.length; i++) {
+    var t = laiTopics[i];
+    var state = loadTopicState(t.id);
+    var sc = statusColors[state.status];
+    var sb = statusBgColors[state.status];
+    var sbc = statusBorderColors[state.status];
+    var sl = statusLabels[state.status];
+
+    var subtopicsHtml = '';
+    for (var j = 0; j < t.subtopics.length; j++) {
+      subtopicsHtml += '<div style="padding:2px 0; font-size:12px; color:#8b949e;">&bull; ' + t.subtopics[j] + '</div>';
+    }
+
+    html += '<div style="background:#161b22; border:1px solid #30363d; border-left:3px solid ' + t.color + '; border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:8px;">'
+      + '<div style="display:flex; justify-content:space-between; align-items:flex-start;">'
+      + '<div>'
+      + '<div style="font-size:15px; font-weight:700; color:#f0f6fc;">' + t.title + '</div>'
+      + '<div style="font-size:12px; color:#8b949e;">' + t.subtitle + '</div>'
+      + '</div>'
+      + '<div onclick="cycleStatus(\'' + t.id + '\')" style="cursor:pointer; background:' + sb + '; border:1px solid ' + sbc + '; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; color:' + sc + '; white-space:nowrap; user-select:none;" title="Click to cycle status">' + sl + '</div>'
+      + '</div>'
+      + '<div style="background:#0d1117; border-radius:6px; padding:10px 12px; font-size:12px; color:#58a6ff; font-style:italic; line-height:1.5;">"' + t.keyQuestion + '"</div>'
+      + subtopicsHtml
+      + '<textarea oninput="updateNotes(\'' + t.id + '\', this.value)" placeholder="Your notes on this topic..." style="width:100%; min-height:48px; background:#0d1117; border:1px solid #30363d; border-radius:6px; color:#c9d1d9; font-family:\'Segoe UI\',system-ui,sans-serif; font-size:12px; line-height:1.5; padding:8px; resize:vertical; box-sizing:border-box; outline:none;">' + (state.notes || '') + '</textarea>'
+      + '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+// ============================
+// Quick Ideas (localStorage)
+// ============================
+function loadQuickIdeas() {
+  try {
+    var saved = localStorage.getItem('linkedin_quick_ideas');
+    if (saved) {
+      document.getElementById('quickIdeas').value = saved;
+    }
+  } catch(e) {}
+}
+
+function saveQuickIdeas() {
+  try {
+    var val = document.getElementById('quickIdeas').value;
+    localStorage.setItem('linkedin_quick_ideas', val);
+    document.getElementById('saveStatus').textContent = 'Saved at ' + new Date().toLocaleTimeString();
+  } catch(e) {}
+}
+
+function clearQuickIdeas() {
+  if (confirm('Clear all quick ideas? This cannot be undone.')) {
+    document.getElementById('quickIdeas').value = '';
+    localStorage.removeItem('linkedin_quick_ideas');
+    document.getElementById('saveStatus').textContent = 'Cleared';
+  }
+}
+
+// ============================
+// Initialize
+// ============================
+renderLaiCards();
+loadQuickIdeas();
+</script>
+
+</body>
+</html>
