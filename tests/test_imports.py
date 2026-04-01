@@ -143,3 +143,92 @@ class TestSeedDataModule:
                     if isinstance(target, ast.Name):
                         top_names.add(target.id)
         assert "posts" in top_names, "seed_data.py should define a 'posts' variable"
+
+
+class TestContentOpsModule:
+    """Test content_ops.py — the Streamlit Content Ops app."""
+
+    def test_content_ops_parses(self):
+        source = (PROJECT_ROOT / "content_ops.py").read_text(encoding="utf-8")
+        ast.parse(source, filename="content_ops.py")
+
+    def test_content_ops_has_expected_functions(self):
+        source = (PROJECT_ROOT / "content_ops.py").read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        func_names = {
+            node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef)
+        }
+        expected = {
+            "parse_posts_from_md",
+            "get_all_series_posts",
+            "load_scraped_posts",
+            "load_state",
+            "save_state",
+            "get_post_key",
+            "page_content_calendar",
+            "page_post_drafting",
+            "page_series_dashboard",
+            "page_performance_analytics",
+            "main",
+        }
+        missing = expected - func_names
+        assert not missing, f"Missing functions in content_ops.py: {missing}"
+
+    def test_parse_posts_from_md(self):
+        """Test markdown post parsing with real data."""
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from content_ops import parse_posts_from_md, CONTENT_DIR
+
+        posts = parse_posts_from_md(CONTENT_DIR / "org_metabolism_series.md")
+        assert len(posts) == 10, f"Expected 10 posts, got {len(posts)}"
+        assert posts[0]["number"] == 1
+        assert "title" in posts[0]
+        assert "body" in posts[0]
+        assert len(posts[0]["body"]) > 50
+
+    def test_get_all_series_posts(self):
+        """Test that all series load their posts."""
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from content_ops import get_all_series_posts, SERIES_CONFIG
+
+        all_posts = get_all_series_posts()
+        assert len(all_posts) == len(SERIES_CONFIG)
+        for key, posts in all_posts.items():
+            assert len(posts) > 0, f"No posts found for series {key}"
+
+    def test_load_scraped_posts(self):
+        """Test scraped data loads correctly."""
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from content_ops import load_scraped_posts
+
+        df = load_scraped_posts()
+        assert len(df) > 0, "No scraped posts found"
+        assert "reactions" in df.columns
+        assert "comments" in df.columns
+        assert "date" in df.columns
+
+    def test_get_post_key(self):
+        """Test post key generation."""
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from content_ops import get_post_key
+
+        key = get_post_key("org_metabolism", 1, "The Core Premise")
+        assert key == "org_metabolism::1::The Core Premise"
+        # Test truncation
+        long_title = "A" * 100
+        key2 = get_post_key("test", 5, long_title)
+        assert len(key2.split("::")[-1]) == 40
+
+    def test_state_round_trip(self):
+        """Test save/load state."""
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from content_ops import load_state
+
+        state = load_state()
+        assert isinstance(state, dict)
+        assert "posts" in state or state == {"posts": {}, "drafts": {}}
