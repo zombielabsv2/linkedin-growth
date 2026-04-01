@@ -16,6 +16,15 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+# Lazy import cloud_store — avoid crash if httpx not installed locally
+def _cloud_store():
+    """Lazy import of cloud_store module."""
+    try:
+        import cloud_store
+        return cloud_store
+    except ImportError:
+        return None
+
 
 # ---------------------------------------------------------------------------
 # Cloud detection & auth
@@ -133,31 +142,56 @@ def _state_file() -> Path:
 def load_state() -> dict:
     """Load the content ops state (post statuses, scheduled dates, etc.).
 
-    On Cloud: uses st.session_state (ephemeral, lost on restart).
-    Locally: reads from data/content_ops_state.json.
+    On Cloud: reads from Supabase, falls back to session_state cache.
+    Locally: reads from data/content_ops_state.json, also syncs to Supabase if available.
     """
+    # Try session_state cache first (avoids repeated Supabase calls per rerun)
+    if "_content_ops_state" in st.session_state:
+        return st.session_state["_content_ops_state"]
+
     if _is_cloud():
-        return st.session_state.get("_content_ops_state", {"posts": {}, "drafts": {}})
+        cs = _cloud_store()
+        if cs and cs.is_cloud_available():
+            data = cs.cloud_get("linkedin:content_state")
+            if data:
+                st.session_state["_content_ops_state"] = data
+                return data
+        return {"posts": {}, "drafts": {}}
+
+    # Local: read from file
     path = _state_file()
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            state = json.load(f)
+            st.session_state["_content_ops_state"] = state
+            return state
     return {"posts": {}, "drafts": {}}
 
 
 def save_state(state: dict):
     """Persist content ops state.
 
-    On Cloud: saves to st.session_state (ephemeral).
-    Locally: writes to data/content_ops_state.json.
+    On Cloud: saves to Supabase + session_state.
+    Locally: writes to data/content_ops_state.json + syncs to Supabase if available.
     """
+    st.session_state["_content_ops_state"] = state
+
     if _is_cloud():
-        st.session_state["_content_ops_state"] = state
+        cs = _cloud_store()
+        if cs and cs.is_cloud_available():
+            cs.cloud_put("linkedin:content_state", state)
         return
+
+    # Local: write to file
     path = _state_file()
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
+
+    # Also sync to Supabase if available (dual-write)
+    cs = _cloud_store()
+    if cs and cs.is_cloud_available():
+        cs.cloud_put("linkedin:content_state", state)
 
 
 def parse_posts_from_md(filepath: Path) -> list[dict]:
@@ -191,8 +225,44 @@ def parse_posts_from_md(filepath: Path) -> list[dict]:
     return posts
 
 
+def _load_series_posts_from_cloud() -> dict[str, list[dict]] | None:
+    """Try loading series posts from Supabase. Returns None if unavailable."""
+    cs = _cloud_store()
+    if not cs or not cs.is_cloud_available():
+        return None
+
+    # Check session cache first
+    if "_cloud_series_posts" in st.session_state:
+        return st.session_state["_cloud_series_posts"]
+
+    result = {}
+    for series_key, cfg in SERIES_CONFIG.items():
+        posts = []
+        for fname in cfg["files"]:
+            cloud_key = f"linkedin:series:{series_key}:{fname}"
+            data = cs.cloud_get(cloud_key)
+            if data and "posts" in data:
+                posts.extend(data["posts"])
+        result[series_key] = posts
+
+    if any(posts for posts in result.values()):
+        st.session_state["_cloud_series_posts"] = result
+        return result
+    return None
+
+
 def get_all_series_posts() -> dict[str, list[dict]]:
-    """Load all posts from all series. Returns {series_key: [post_dicts]}."""
+    """Load all posts from all series. Returns {series_key: [post_dicts]}.
+
+    On Cloud: reads from Supabase.
+    Locally: reads from content/ directory files.
+    """
+    if _is_cloud():
+        cloud_data = _load_series_posts_from_cloud()
+        if cloud_data is not None:
+            return cloud_data
+
+    # Local: read from filesystem
     result = {}
     for key, cfg in SERIES_CONFIG.items():
         posts = []
@@ -203,15 +273,13 @@ def get_all_series_posts() -> dict[str, list[dict]]:
     return result
 
 
-def load_scraped_posts() -> pd.DataFrame:
-    """Load scraped_posts.json into a DataFrame."""
-    if not JSON_PATH.exists():
+def _parse_scraped_df(data: list) -> pd.DataFrame:
+    """Convert scraped posts list to a properly typed DataFrame."""
+    if not data:
         return pd.DataFrame(columns=[
             "post_text", "date", "reactions", "comments",
             "impressions", "post_url", "source", "collected_at",
         ])
-    with open(JSON_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
     df = pd.DataFrame(data)
     if "date" in df.columns:
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
@@ -219,6 +287,32 @@ def load_scraped_posts() -> pd.DataFrame:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
     return df
+
+
+def load_scraped_posts() -> pd.DataFrame:
+    """Load scraped_posts.json into a DataFrame.
+
+    On Cloud: reads from Supabase.
+    Locally: reads from data/scraped_posts.json.
+    """
+    if _is_cloud():
+        cs = _cloud_store()
+        if cs and cs.is_cloud_available():
+            # Check session cache
+            if "_cloud_scraped_posts" in st.session_state:
+                return st.session_state["_cloud_scraped_posts"]
+            data = cs.cloud_get("linkedin:engagement_data")
+            if data and "posts" in data:
+                df = _parse_scraped_df(data["posts"])
+                st.session_state["_cloud_scraped_posts"] = df
+                return df
+
+    # Local: read from file
+    if not JSON_PATH.exists():
+        return _parse_scraped_df([])
+    with open(JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return _parse_scraped_df(data)
 
 
 def get_post_key(series_key: str, post_number: int, post_title: str) -> str:
@@ -256,6 +350,7 @@ def page_content_calendar():
                 "Series": cfg["name"],
                 "Post #": p["number"],
                 "Title": p["title"],
+                "Body": p.get("body", ""),
                 "Status": status,
                 "Scheduled": scheduled_date,
                 "Key": pkey,
@@ -356,6 +451,15 @@ def page_content_calendar():
                     }
                     save_state(state)
                     st.toast(f"Updated: Post {row['Post #']} - {row['Title']}")
+
+            # Expandable post content
+            body_text = row.get("Body", "")
+            if body_text:
+                with st.expander(f"Read Post {row['Post #']}", expanded=False):
+                    st.markdown(body_text)
+                    word_count = len(body_text.split())
+                    char_count = len(body_text)
+                    st.caption(f"{word_count} words · {char_count} chars")
 
     # Key Insights
     st.divider()
@@ -488,7 +592,18 @@ Characters: {len(draft_body)}
 """
 
         if _is_cloud():
-            # On Cloud: store in session_state (ephemeral)
+            # On Cloud: store in Supabase + session_state
+            cs = _cloud_store()
+            if cs and cs.is_cloud_available():
+                draft_key = f"linkedin:drafts:{filename}"
+                cs.cloud_put(draft_key, {
+                    "filename": filename,
+                    "content": content,
+                    "series_key": series_key,
+                    "post_number": draft_number,
+                    "title": draft_title,
+                    "created": datetime.now().isoformat(),
+                })
             if "_draft_files" not in st.session_state:
                 st.session_state["_draft_files"] = {}
             st.session_state["_draft_files"][filename] = content
@@ -497,6 +612,18 @@ Characters: {len(draft_body)}
             ensure_drafts_dir()
             filepath = DRAFTS_DIR / filename
             filepath.write_text(content, encoding="utf-8")
+            # Also sync draft to Supabase if available
+            cs = _cloud_store()
+            if cs and cs.is_cloud_available():
+                draft_key = f"linkedin:drafts:{filename}"
+                cs.cloud_put(draft_key, {
+                    "filename": filename,
+                    "content": content,
+                    "series_key": series_key,
+                    "post_number": draft_number,
+                    "title": draft_title,
+                    "created": datetime.now().isoformat(),
+                })
 
         # Update state
         state = load_state()
@@ -523,12 +650,23 @@ Characters: {len(draft_body)}
 
 
 def _show_saved_drafts():
-    """Display saved drafts from filesystem (local) or session_state (Cloud)."""
+    """Display saved drafts from Supabase (Cloud), session_state, or filesystem (local)."""
     if _is_cloud():
-        draft_store = st.session_state.get("_draft_files", {})
+        # Merge Supabase drafts with session drafts
+        draft_store = dict(st.session_state.get("_draft_files", {}))
+
+        # Load any additional drafts from Supabase that aren't in session
+        cs = _cloud_store()
+        if cs and cs.is_cloud_available():
+            cloud_drafts = cs.cloud_list_with_data("linkedin:drafts:")
+            for item in cloud_drafts:
+                fname = item["data"].get("filename", "")
+                if fname and fname not in draft_store:
+                    draft_store[fname] = item["data"].get("content", "")
+
         if draft_store:
             st.divider()
-            st.subheader("Saved Drafts (this session)")
+            st.subheader("Saved Drafts")
             for fname, content in sorted(draft_store.items()):
                 col_name, col_view = st.columns([4, 1])
                 with col_name:
@@ -906,15 +1044,25 @@ def main():
     # Password gate
     _check_auth()
 
-    # Cloud warning banner
+    # Cloud info banner
     if _is_cloud():
-        st.markdown(
-            '<div style="background:#d292221a; border:1px solid #d29922; border-radius:6px; '
-            'padding:10px 14px; margin-bottom:12px; font-size:13px; color:#d29922;">'
-            'Running on Streamlit Cloud. Status changes and drafts are stored in your '
-            'session only and will be lost when the app restarts.</div>',
-            unsafe_allow_html=True,
-        )
+        cs = _cloud_store()
+        if cs and cs.is_cloud_available():
+            st.markdown(
+                '<div style="background:#3fb95015; border:1px solid #3fb950; border-radius:6px; '
+                'padding:10px 14px; margin-bottom:12px; font-size:13px; color:#3fb950;">'
+                'Running on Streamlit Cloud with Supabase persistence. '
+                'All changes are saved and will survive restarts.</div>',
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                '<div style="background:#d292221a; border:1px solid #d29922; border-radius:6px; '
+                'padding:10px 14px; margin-bottom:12px; font-size:13px; color:#d29922;">'
+                'Running on Streamlit Cloud without Supabase. Status changes and drafts are stored in your '
+                'session only and will be lost when the app restarts. Configure SUPABASE_URL and SUPABASE_KEY in secrets.</div>',
+                unsafe_allow_html=True,
+            )
 
     # Sidebar navigation
     st.sidebar.title("Content Ops")
