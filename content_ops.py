@@ -16,6 +16,40 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+
+# ---------------------------------------------------------------------------
+# Cloud detection & auth
+# ---------------------------------------------------------------------------
+
+def _is_cloud() -> bool:
+    """Check if running on Streamlit Cloud."""
+    return (
+        os.environ.get("STREAMLIT_SHARING_MODE") == "true"
+        or os.path.exists("/mount/src")
+    )
+
+
+def _check_auth():
+    """Password gate — blocks access until correct password is entered."""
+    if st.session_state.get("authenticated"):
+        return
+
+    st.title("LinkedIn Content Ops")
+    st.markdown(
+        '<p style="color:#8b949e; font-size:15px;">Enter password to continue.</p>',
+        unsafe_allow_html=True,
+    )
+    password = st.text_input("Password", type="password", key="login_password")
+    if password:
+        app_password = st.secrets.get("app_password", "contentops2024")
+        if password == app_password:
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password.")
+    st.stop()
+
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -97,7 +131,13 @@ def _state_file() -> Path:
 
 
 def load_state() -> dict:
-    """Load the content ops state (post statuses, scheduled dates, etc.)."""
+    """Load the content ops state (post statuses, scheduled dates, etc.).
+
+    On Cloud: uses st.session_state (ephemeral, lost on restart).
+    Locally: reads from data/content_ops_state.json.
+    """
+    if _is_cloud():
+        return st.session_state.get("_content_ops_state", {"posts": {}, "drafts": {}})
     path = _state_file()
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
@@ -106,7 +146,14 @@ def load_state() -> dict:
 
 
 def save_state(state: dict):
-    """Persist content ops state to disk."""
+    """Persist content ops state.
+
+    On Cloud: saves to st.session_state (ephemeral).
+    Locally: writes to data/content_ops_state.json.
+    """
+    if _is_cloud():
+        st.session_state["_content_ops_state"] = state
+        return
     path = _state_file()
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -422,11 +469,8 @@ def page_post_drafting():
     # Save draft
     st.divider()
     if st.button("Save Draft", type="primary", disabled=not (draft_title and draft_body)):
-        ensure_drafts_dir()
-        # Save as markdown file in drafts/
         safe_title = re.sub(r"[^\w\s-]", "", draft_title).strip().replace(" ", "_")[:50]
         filename = f"{series_key}_post{draft_number}_{safe_title}.md"
-        filepath = DRAFTS_DIR / filename
 
         content = f"""# {cfg['name']} | Post {draft_number}: {draft_title}
 
@@ -442,7 +486,17 @@ Characters: {len(draft_body)}
 
 {draft_body}
 """
-        filepath.write_text(content, encoding="utf-8")
+
+        if _is_cloud():
+            # On Cloud: store in session_state (ephemeral)
+            if "_draft_files" not in st.session_state:
+                st.session_state["_draft_files"] = {}
+            st.session_state["_draft_files"][filename] = content
+        else:
+            # Locally: write to drafts/ directory
+            ensure_drafts_dir()
+            filepath = DRAFTS_DIR / filename
+            filepath.write_text(content, encoding="utf-8")
 
         # Update state
         state = load_state()
@@ -462,21 +516,39 @@ Characters: {len(draft_body)}
         }
         save_state(state)
 
-        st.success(f"Draft saved: drafts/{filename}")
+        st.success(f"Draft saved: {filename}")
 
     # Show existing drafts
-    if DRAFTS_DIR.exists():
-        draft_files = sorted(DRAFTS_DIR.glob("*.md"))
-        if draft_files:
+    _show_saved_drafts()
+
+
+def _show_saved_drafts():
+    """Display saved drafts from filesystem (local) or session_state (Cloud)."""
+    if _is_cloud():
+        draft_store = st.session_state.get("_draft_files", {})
+        if draft_store:
             st.divider()
-            st.subheader("Saved Drafts")
-            for df_path in draft_files:
-                col_name, col_del = st.columns([4, 1])
+            st.subheader("Saved Drafts (this session)")
+            for fname, content in sorted(draft_store.items()):
+                col_name, col_view = st.columns([4, 1])
                 with col_name:
-                    st.text(df_path.name)
-                with col_del:
-                    if st.button("View", key=f"view_{df_path.name}"):
-                        st.code(df_path.read_text(encoding="utf-8"), language="markdown")
+                    st.text(fname)
+                with col_view:
+                    if st.button("View", key=f"view_{fname}"):
+                        st.code(content, language="markdown")
+    else:
+        if DRAFTS_DIR.exists():
+            draft_files = sorted(DRAFTS_DIR.glob("*.md"))
+            if draft_files:
+                st.divider()
+                st.subheader("Saved Drafts")
+                for df_path in draft_files:
+                    col_name, col_del = st.columns([4, 1])
+                    with col_name:
+                        st.text(df_path.name)
+                    with col_del:
+                        if st.button("View", key=f"view_{df_path.name}"):
+                            st.code(df_path.read_text(encoding="utf-8"), language="markdown")
 
 
 # ---------------------------------------------------------------------------
@@ -830,6 +902,19 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
+
+    # Password gate
+    _check_auth()
+
+    # Cloud warning banner
+    if _is_cloud():
+        st.markdown(
+            '<div style="background:#d292221a; border:1px solid #d29922; border-radius:6px; '
+            'padding:10px 14px; margin-bottom:12px; font-size:13px; color:#d29922;">'
+            'Running on Streamlit Cloud. Status changes and drafts are stored in your '
+            'session only and will be lost when the app restarts.</div>',
+            unsafe_allow_html=True,
+        )
 
     # Sidebar navigation
     st.sidebar.title("Content Ops")
