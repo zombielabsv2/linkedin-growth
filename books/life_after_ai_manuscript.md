@@ -302,6 +302,26 @@ The people who will thrive are not those who cling to their job title. They are 
 
 The letting go is painful. But what is on the other side is more honest -- a version of yourself that no machine can obsolete, because it was never about the machine in the first place.
 
+---
+
+### The Anthropocenic Paradox
+
+Sam Jacobs coined a term that stopped me: the Anthropocenic era. His argument is deceptively simple. "The most important natural resource is humans -- and we're running out."
+
+Not running out of bodies. Running out of relevance.
+
+We spent three centuries building an economy that valued humans for what they could produce. The Industrial Revolution made human labor more productive. The information revolution made human knowledge more productive. Each wave increased the value of human contribution. Then we built AI -- and the curve inverted. For the first time in the history of civilization, we have created systems that do not need human productivity at all.
+
+This is the Anthropocenic Paradox. We optimized human contribution so relentlessly that we engineered ourselves out of the equation. The centuries-long project of increasing human productivity has culminated in a technology that makes human productivity optional.
+
+The crisis this creates is not unemployment. Unemployment is an economic problem with economic solutions. The crisis is purposelessness. If we defined ourselves by what we produce -- and the entire architecture of modern identity says we did -- then what happens when production no longer needs us?
+
+The shift is from "I am what I do" to something far more disorienting and far more honest: "I am what I choose to pay attention to."
+
+That is not a demotion. It is a liberation -- if we can survive the vertigo. The identity crisis is not about losing a job. It is about losing the framework that told us what a life was for. And the only way through is to build a new framework, one that roots human worth not in output but in presence, not in productivity but in the quality of consciousness we bring to each encounter.
+
+The Anthropocenic era does not end the human story. But it ends the chapter where the story was about what we could do. The next chapter -- if we write it well -- will be about who we choose to become.
+
 If you could not describe yourself by what you do for work, how would you introduce yourself?
 
 ---
@@ -575,6 +595,26 @@ His purpose is not derived from output. It is derived from being. From the quali
 When I watch Kairav, I see the answer to the Meaning Problem. Not as an abstraction, but as a lived demonstration. Purpose does not require productivity. Meaning does not require achievement. The deepest human experiences -- love, presence, compassion, beauty -- have nothing to do with work, and everything to do with attention.
 
 The question is whether a civilization addicted to productivity can learn this lesson before the addiction kills it.
+
+---
+
+### From Natural Resource to Conscious Choice
+
+Sam Jacobs frames the human predicament with an economist's precision and a humanist's grief: "The most important natural resource is humans -- and we're running out."
+
+The language is deliberate. Natural resource. It is how we have treated human beings for three hundred years. The Industrial Revolution needed hands. The information economy needed minds. Each era extracted what it needed from the human organism and discarded the rest. We called it "human resources" and put it in a department. We measured "human capital" and put it on a balance sheet. We optimized "human productivity" and put it in a performance review.
+
+Resources are extracted and consumed. That is the logic. And for as long as the extraction was necessary -- as long as the economy needed human hands, human minds, human labor to function -- the framework held. People had a role. The role gave meaning. The meaning sustained identity.
+
+AI breaks the extraction logic. Not partially. Completely. The economy no longer needs to extract productivity from human beings. It can generate productivity on its own. The natural resource is, in economic terms, depleted -- not because humans have become less capable, but because their capability is no longer scarce.
+
+This is the deepest form of the Meaning Problem. Not "what do I do now?" but "what am I for?"
+
+Buddhism has a sharp answer. The suffering was never in the productivity. The suffering was in the attachment to productivity as the source of worth. The technical writer mourning her craft. The analyst clinging to his spreadsheets. The coder defending his syntax. Each is suffering because they mistook the extraction for the essence.
+
+The post-AI meaning shift is from "human as resource" to "human as purpose." Not: what can you produce? But: what do you choose to create, connect, or understand? Not: what value can be extracted from you? But: what value do you choose to generate from within?
+
+This is not a smaller question. It is the largest question a civilization can ask. And for the first time in modern history, we have no choice but to ask it.
 
 When the doing is done for you, what remains worth doing?
 
@@ -887,6 +927,24 @@ The real question is not "will there be jobs?" Jobs are a means, not an end. The
 I keep returning to the pre-1973 bargain. Before 1973, productivity grew with wages. When the economy got more productive, workers got richer. After 1973, the link broke. Productivity kept rising. Wages stagnated. AI accelerates this divergence to a degree that makes the post-1973 gap look like a rounding error.
 
 The income question is not about technology. It is about power. Who captures the value that AI creates? The five people in the company? The shareholders? The society that educated the five hundred who are no longer needed?
+
+---
+
+### Valuing What Cannot Be Automated
+
+Sam Jacobs argues that we are living in the Anthropocenic era -- the age in which the most important natural resource, humans, is being devalued by the very systems humans built. If he is right, then the economic question is not UBI versus no-UBI. That is a question about distribution. The deeper question is about value itself: what forms of human contribution remain valuable when production is automated?
+
+The answer, I believe, is a list that no economist would have taken seriously twenty years ago. Care. Judgment. Taste. Presence. Creativity. Moral reasoning. The ability to sit with someone who is afraid and make them feel less alone. The ability to look at three options that all seem reasonable and choose the one that accounts for the thing no dataset captured. The ability to say "this is beautiful" and mean it in a way that reflects a lifetime of seeing.
+
+These are not soft skills. In an Anthropocenic economy, they are the only hard skills left.
+
+The emerging shift is from what I have called the "attention economy" to something more fundamental: a meaning economy. The attention economy monetized human eyeballs -- the ability to capture and hold focus. The meaning economy monetizes human depth -- the ability to create experiences that matter, connections that endure, judgments that account for what machines cannot see.
+
+How do we build economic systems that value these contributions? Not through traditional employment, which measures hours and output. Not through UBI alone, which provides income without participation. Perhaps through what I would call contribution infrastructure -- systems that recognize, reward, and support the forms of human value that exist outside the production function.
+
+A teacher who transforms a child's relationship with curiosity. A nurse whose presence changes a patient's experience of pain. A community organizer who builds trust across difference. A craftsperson whose work carries the weight of a tradition. These contributions are real, measurable in their effects if not in their units, and they represent the economy that survives the Anthropocenic transition.
+
+The question is whether we will build systems that value them before the old systems collapse -- or after.
 
 This is the most important question of our time, and I do not have the answer. But I know the question is more important than any product launch this year.
 
