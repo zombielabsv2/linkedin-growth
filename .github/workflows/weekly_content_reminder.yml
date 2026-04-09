@@ -1,0 +1,28 @@
+name: Weekly Content Reminder
+
+on:
+  schedule:
+    # Every Sunday 2:30 PM UTC = 8:00 PM IST
+    - cron: '30 14 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  send-content-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install httpx
+
+      - name: Send weekly content email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: python weekly_content_email.py

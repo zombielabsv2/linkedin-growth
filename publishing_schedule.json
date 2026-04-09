@@ -1,0 +1,167 @@
+[
+  {
+    "week": 1,
+    "publish_date": "2026-04-14",
+    "post_number": 1,
+    "title": "The Blind Spot in Every AI Strategy",
+    "function": "Cross-Functional",
+    "newsletter_file": "content/newsletter/week_01_blind_spot.md",
+    "linkedin_hook_number": 1,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "ready"
+  },
+  {
+    "week": 2,
+    "publish_date": "2026-04-21",
+    "post_number": 2,
+    "title": "What I Learned Watching Legal Teams Discover AI",
+    "function": "Legal",
+    "newsletter_file": "content/newsletter/week_02_legal_ai.md",
+    "linkedin_hook_number": 2,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "ready"
+  },
+  {
+    "week": 3,
+    "publish_date": "2026-04-28",
+    "post_number": 3,
+    "title": "The AI-Native CFO Is Already Here",
+    "function": "Finance",
+    "newsletter_file": "content/newsletter/week_03_finance_ai.md",
+    "linkedin_hook_number": 3,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "ready"
+  },
+  {
+    "week": 4,
+    "publish_date": "2026-05-05",
+    "post_number": 4,
+    "title": "Why IT Is Both the Hero and the Bottleneck",
+    "function": "IT",
+    "newsletter_file": null,
+    "linkedin_hook_number": 4,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 5,
+    "publish_date": "2026-05-12",
+    "post_number": 5,
+    "title": "HR Has Been Doing AI Transformation Longer Than Anyone Realizes",
+    "function": "HR",
+    "newsletter_file": null,
+    "linkedin_hook_number": 5,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 6,
+    "publish_date": "2026-05-19",
+    "post_number": 6,
+    "title": "Supply Chain: Where AI Delivers the Fastest ROI",
+    "function": "Supply Chain",
+    "newsletter_file": null,
+    "linkedin_hook_number": 6,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 7,
+    "publish_date": "2026-05-26",
+    "post_number": 7,
+    "title": "The Operations Floor Is Smarter Than the Boardroom Thinks",
+    "function": "Operations",
+    "newsletter_file": null,
+    "linkedin_hook_number": 7,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 8,
+    "publish_date": "2026-06-02",
+    "post_number": 8,
+    "title": "The Seven Conversations That Make or Break Enterprise AI",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 8,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 9,
+    "publish_date": "2026-06-09",
+    "post_number": 9,
+    "title": "Why Your AI Pilot Succeeded and Your AI Transformation Failed",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 9,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 10,
+    "publish_date": "2026-06-16",
+    "post_number": 10,
+    "title": "The Consulting Firms Are Rewriting the Enterprise AI Playbook",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 10,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 11,
+    "publish_date": "2026-06-23",
+    "post_number": 11,
+    "title": "The Framework Nobody Talks About: Wardley Mapping for AI",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 11,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 12,
+    "publish_date": "2026-06-30",
+    "post_number": 12,
+    "title": "What Google, Uber, and Amazon Actually Teach About Enterprise AI",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 12,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 13,
+    "publish_date": "2026-07-07",
+    "post_number": 13,
+    "title": "The Talent Gap Nobody Is Measuring",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 13,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 14,
+    "publish_date": "2026-07-14",
+    "post_number": 14,
+    "title": "The Governance Question Nobody Wants to Own",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 14,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  },
+  {
+    "week": 15,
+    "publish_date": "2026-07-21",
+    "post_number": 15,
+    "title": "The Enterprise AI Transformation Is Not an IT Project",
+    "function": "Cross-Functional",
+    "newsletter_file": null,
+    "linkedin_hook_number": 15,
+    "linkedin_full_post": "content/enterprise_ai_transformation_series.md",
+    "status": "draft_needed"
+  }
+]

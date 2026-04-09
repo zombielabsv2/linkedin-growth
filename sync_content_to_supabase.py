@@ -80,6 +80,13 @@ SERIES_CONFIG = {
         "description": "Lessons from an unlikely life — memoir meets philosophy. Awakening + Assets + Access = Impact.",
         "target_posts": 15,
     },
+    "enterprise_ai": {
+        "name": "Enterprise AI Transformation",
+        "color": "#06b6d4",
+        "files": ["enterprise_ai_transformation_series.md"],
+        "description": "Function-by-function AI transformation: Legal, Finance, IT, HR, Supply Chain, Operations, Sales. Authority-building series.",
+        "target_posts": 15,
+    },
 }
 
 
